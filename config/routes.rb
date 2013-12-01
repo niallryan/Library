@@ -1,4 +1,7 @@
 Library::Application.routes.draw do
+  resources :updates
+
+
   resources :books
 
 
