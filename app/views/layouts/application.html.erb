@@ -8,17 +8,24 @@
 </head>
 <body>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-
-	<h1>Library App</h1>
-	<menu label="menu">
-		<li><%= link_to "Register", new_user_registration_path %></li>
+    <h1>Library App</h1>
+    <menu label="menu">
+        <li><%= link_to "Register", new_user_registration_path %></li>
         <li><%= link_to "Log In", new_user_session_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
         <li><%= link_to "Updates", updates_path %></li>
         <li><%= link_to "Books", books_path %></li>
-	</menu>
+    </menu>
+
+    <!-- http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/designing-urls/refactoring-the-flash-code -->
+    <div class="container">
+      <% flash.each do |type, message| %>
+        <div class="alert <%= flash_class type %>">
+          <button class="close" data-dismiss="alert">x</button>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
 
 <%= yield %>
 
