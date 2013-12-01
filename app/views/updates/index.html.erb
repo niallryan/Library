@@ -11,7 +11,7 @@
 
 <% @updates.each do |update| %>
   <tr>
-    <td><%= update.user.email %></td>
+    <td><%= update.user.profile_name %></td>
     <td><%= update.content %></td>
     <td><%= link_to 'Show', update %></td>
     <td><%= link_to 'Edit', edit_update_path(update) %></td>
