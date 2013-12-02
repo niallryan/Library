@@ -8,6 +8,14 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_name
   # attr_accessible :title, :body
 
+  # http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/writing-tests/
+  validates :profile_name, presence: true,
+                           uniqueness: true,
+                           format: {
+                             with: /a-zA-Z0-9_-/,
+                             message: "Must be formatted correctly."
+                           }
+
   has_many :updates
   has_many :books
 
