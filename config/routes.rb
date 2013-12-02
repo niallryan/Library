@@ -1,4 +1,6 @@
 Library::Application.routes.draw do
+  get "profiles/show"
+
   resources :updates
 
 
@@ -6,6 +8,9 @@ Library::Application.routes.draw do
 
 
   devise_for :users
+
+  # http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2
+  get '/:id', to: 'profiles#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,19 @@
+<!-- http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2 -->
+
+<h1><%= @user.profile_name %></h1>
+
+<% if @updates %>
+    <% @updates.each do |update| %>
+        <div>
+          <% update.content %>
+        </div>
+    <% end %>
+<% end %>
+
+<% if @books %>
+    <% @books.each do |book| %>
+        <div>
+          <% book.title %>
+        </div>
+    <% end %>
+<% end %>
