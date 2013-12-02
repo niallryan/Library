@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b389df0c-bec2-474b-accb-15fe13cfbe71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__Library.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Library.iml" afterPath="$PROJECT_DIR$/.idea/Library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__Library.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/spec__Library.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/test__Library.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/updates.yml" afterPath="$PROJECT_DIR$/test/fixtures/updates.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/user_test.rb" afterPath="$PROJECT_DIR$/test/unit/user_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
     </list>
     <ignored path="Library.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b389df0c-bec2-474b-accb-15fe13cfbe71" time="1385983463579" ignored="false" />
-    <file path="/user_test.rb" changelist="b389df0c-bec2-474b-accb-15fe13cfbe71" time="1385987164477" ignored="false" />
+    <file path="/user_test.rb" changelist="b389df0c-bec2-474b-accb-15fe13cfbe71" time="1385988048211" ignored="false" />
     <file path="/user.rb" changelist="b389df0c-bec2-474b-accb-15fe13cfbe71" time="1385987315719" ignored="false" />
     <file path="/users.yml" changelist="b389df0c-bec2-474b-accb-15fe13cfbe71" time="1385986364966" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,19 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user_test.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user_test.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/user_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="77" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0">
+            <state line="24" column="4" selection-start="913" selection-end="913" vertical-scroll-proportion="0.4864865">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="36" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2837838">
+            <state line="14" column="52" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,8 +98,8 @@
         <option value="$PROJECT_DIR$/app/views/books/index.html.erb" />
         <option value="$PROJECT_DIR$/test/fixtures/updates.yml" />
         <option value="$PROJECT_DIR$/test/fixtures/users.yml" />
-        <option value="$PROJECT_DIR$/test/unit/user_test.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/test/unit/user_test.rb" />
       </list>
     </option>
   </component>
@@ -539,16 +528,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/user_test.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="77" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0">
+        <state line="14" column="52" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/test/unit/user_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2837838">
+        <state line="24" column="4" selection-start="913" selection-end="913" vertical-scroll-proportion="0.4864865">
           <folding />
         </state>
       </provider>
