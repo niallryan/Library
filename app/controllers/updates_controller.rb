@@ -40,7 +40,8 @@ class UpdatesController < ApplicationController
   # POST /updates
   # POST /updates.json
   def create
-    @update = Update.new(params[:update])
+    # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/creating-friendships/what-is-a-join-table
+    @update = current_user.updates.new(params[:update])
 
     respond_to do |format|
       if @update.save
@@ -56,8 +57,11 @@ class UpdatesController < ApplicationController
   # PUT /updates/1
   # PUT /updates/1.json
   def update
-    @update = Update.find(params[:id])
-
+    # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/creating-friendships/what-is-a-join-table
+    @update = current_user.updates.find(params[:id])
+    if params[:update] && params[:update].has_key?(:user_id)
+      params[:update].delete(:user_id)
+    end
     respond_to do |format|
       if @update.update_attributes(params[:update])
         format.html { redirect_to @update, notice: 'Update was successfully updated.' }
