@@ -1,5 +1,6 @@
 Library::Application.routes.draw do
   get "profiles/show"
+  get "welcome/home"
 
   resources :updates
 
@@ -9,8 +10,11 @@ Library::Application.routes.draw do
 
   devise_for :users
 
+  # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-controller
+  resources :user_friendships
+
   # http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2
-  get '/:id', to: 'profiles#show'
+  get '/:id', to: 'profiles#show', :as => :profile
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

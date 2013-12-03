@@ -1,0 +1,16 @@
+<!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-controller -->
+
+<% if @friend %>
+    <h1><%= @friend.profile_name %></h1>
+
+    <p>Do you really want to add <%= @friend.profile_name %> as a friend?</p>
+
+    <%= form_for @user_friendship, method: :post do |form| %>
+        <div class="form form-actions">
+          <%= form.hidden_field :friend_id, value: @friend.profile_name %>
+          <%= submit_tag "YES", class: "btn btn-primary" %>
+          <%= link_to "NO", profile_path(@friend), class: "btn" %>
+        </div>
+    <% end %>
+
+<% end %>
