@@ -1,4 +1,7 @@
 Library::Application.routes.draw do
+  resources :reviews
+
+
   get "profiles/show"
   get "welcome/home"
 
