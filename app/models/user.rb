@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   has_many :books
   has_many :user_friendships
   has_many :reviews
+  has_many :book_lists
 
   # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/creating-friendships/
   has_many :friends, through: :user_friendships

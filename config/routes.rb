@@ -1,4 +1,7 @@
 Library::Application.routes.draw do
+  resources :book_lists
+
+
   resources :reviews
 
 
