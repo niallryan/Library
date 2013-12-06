@@ -1,6 +1,5 @@
 class CreateBookLists < ActiveRecord::Migration
   def change
-    drop_table :book_lists
     create_table :book_lists do |t|
       t.references :book
 
