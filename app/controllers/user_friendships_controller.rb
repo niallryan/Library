@@ -35,4 +35,8 @@ class UserFriendshipsController < ApplicationController
 
   end
 
+  def index
+    @user_friendships = current_user.user_friendships.all
+  end
+
 end

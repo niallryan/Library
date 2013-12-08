@@ -5,6 +5,7 @@ class Book < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :book_list
+  # acts_as_list scope: :book_list
   has_many :reviews
 
 end
