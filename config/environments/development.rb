@@ -37,4 +37,8 @@ Library::Application.configure do
 
   # Devise Default URLs Config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip Path
+  Paperclip.options[:command_path] = "C:/IMagick6"
+
 end

@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_name, :profile_pic
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_name, :profile_pic, :favourite_book
 
   # http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/writing-tests/
   validates :profile_name, presence: true,

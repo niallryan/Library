@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131208211744) do
+ActiveRecord::Schema.define(:version => 20131208213236) do
 
   create_table "book_lists", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20131208211744) do
     t.string   "profile_pic_content_type"
     t.integer  "profile_pic_file_size"
     t.datetime "profile_pic_updated_at"
+    t.string   "favourite_book"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

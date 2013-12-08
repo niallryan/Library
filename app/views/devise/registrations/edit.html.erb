@@ -14,6 +14,10 @@
     <%= image_tag f.object.profile_pic.url(:small) %>
   <% end %>
 
+  <div>
+    <%= f.input :favourite_book %>
+  </div>
+
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 

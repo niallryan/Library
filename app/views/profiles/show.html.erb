@@ -1,6 +1,8 @@
 <!-- http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2 -->
 
 <%= profile_pic_link @user, {} %>
+<label>Favourite Book:</label>
+<%= @user.favourite_book %>
 
 <h1><%= @user.profile_name %></h1>
 <!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
