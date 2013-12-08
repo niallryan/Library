@@ -2,24 +2,24 @@
 
 <table>
   <tr>
+    <th>Cover Image</th>
     <th>Title</th>
     <th>Author</th>
     <th>Genre</th>
     <th>Isbn</th>
     <th>Publisher</th>
-    <th>Cover Image</th>
     <th>Description</th>
     <th></th>
   </tr>
 
 <% @books.each do |book| %>
   <tr>
+    <td><%= image_tag book.cover_image(:small) %></td>
     <td><%= book.title %></td>
     <td><%= book.author %></td>
     <td><%= book.genre %></td>
     <td><%= book.ISBN %></td>
     <td><%= book.publisher %></td>
-    <td><%= book.image %></td>
     <td><%= book.description %></td>
     <td><%= link_to 'Show', book %></td>
     <td><%= link_to 'Edit', edit_book_path(book) %></td>
