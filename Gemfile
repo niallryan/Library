@@ -22,6 +22,10 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'simple_form'
+gem 'paperclip'
+gem 'opinio'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -37,3 +41,5 @@ gem 'devise'
 
 # To use debugger
 # gem 'debugger'
+
+gem "kaminari"

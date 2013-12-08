@@ -1,17 +1,27 @@
 Library::Application.routes.draw do
-  resources :book_lists
+  opinio_model
+
+  resources :book_lists do
+    opinio
+  end
 
 
-  resources :reviews
+  resources :reviews do
+    opinio
+  end
 
 
   get "profiles/show"
   get "welcome/home"
 
-  resources :updates
+  resources :updates do
+    opinio
+  end
 
 
-  resources :books
+  resources :books do
+    opinio
+  end
 
 
   devise_for :users

@@ -1,5 +1,7 @@
 <!-- http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2 -->
 
+<%= profile_pic_link @user, {} %>
+
 <h1><%= @user.profile_name %></h1>
 <!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
 <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: "btn" %>

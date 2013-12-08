@@ -7096,3 +7096,9 @@ td.visible-print {
     display: none !important;
   }
 }
+
+/* Custom Styles */
+body {
+    width: 80%;
+    margin: auto;
+}

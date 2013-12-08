@@ -14,6 +14,7 @@
     <td><%= link_to 'Show', book_list %></td>
     <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
     <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= comments_for book_list %></td>
   </tr>
 <% end %>
 </table>

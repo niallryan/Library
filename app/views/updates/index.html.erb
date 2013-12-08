@@ -11,6 +11,7 @@
 
 <% @updates.each do |update| %>
   <tr>
+    <td><%= profile_pic_link update.user, {} %></td>
     <td><%= update.user.profile_name %></td>
     <td><%= update.content %></td>
     <td><%= link_to 'Show', update %></td>
