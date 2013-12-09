@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131208225658) do
+ActiveRecord::Schema.define(:version => 20131209111851) do
+
+  create_table "book_list_items", :force => true do |t|
+    t.integer  "book_list_id"
+    t.integer  "book_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "book_list_items", ["book_id", "book_list_id"], :name => "index_book_list_items_on_book_id_and_book_list_id"
 
   create_table "book_lists", :force => true do |t|
     t.datetime "created_at", :null => false

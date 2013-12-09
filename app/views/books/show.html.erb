@@ -40,7 +40,20 @@
   <%= comments_for @book %>
 </p>
 
-%>
+<!--<p>-->
+  <!--<strong>Lists:</strong><br />-->
+  <!--<#% @book.book_list_items.each do |item| %>-->
+    <!--<#%= BookList.find(item.book_list_id).title %><br />-->
+  <!--<#% end %>-->
+<!--</p>-->
+
+<p>
+  <strong>Add To List</strong>
+  <%= form_for(@book) do |f| %>
+    <%= f.collection_select 'book_list_ids', current_user.book_lists.all, :id, :title, { include_blank: "" } %>
+    <%= f.submit %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

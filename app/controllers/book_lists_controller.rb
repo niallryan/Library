@@ -58,6 +58,13 @@ class BookListsController < ApplicationController
   def update
     @book_list = BookList.find(params[:id])
 
+    # https://gist.github.com/arelenglish/6110438
+    @book_id = params[:book_list].delete(:books)
+
+    if @book_id
+      @book_list_item = BookListItem.create(:book_id => @book_id, :book_list_id => @book_list.id)
+    end
+
     respond_to do |format|
       if @book_list.update_attributes(params[:book_list])
         format.html { redirect_to @book_list, notice: 'Book list was successfully updated.' }

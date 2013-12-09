@@ -1,8 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- https://gist.github.com/arelenglish/6110438 -->
 
+<p>
+  <strong>Title:</strong>
+  <%= @book_list.title %>
 </p>
+
+<p>
+  <strong>Books</strong><br />
+    <% @book_list.book_list_items.each do |item| %>
+        <%= item.book.title %><br />
+    <% end %>
+</p>
+
+<strong>Add Book</strong>
+<%= form_for(@book_list) do |f| %>
+    <%= f.collection_select 'book_ids', Book.all, :id, :title, { include_blank: "" } %>
+    <%= f.submit %>
+<% end %>
 
 <%= comments_for @book_list %>
 
