@@ -35,4 +35,10 @@ class User < ActiveRecord::Base
     profile_name
   end
 
+  def self.search(search_query)
+    if search_query
+      find(:all,:conditions => ['profile_name LIKE ?', "%#{search_query}%"])
+    end
+  end
+
 end

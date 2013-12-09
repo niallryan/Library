@@ -1,3 +1,7 @@
+<!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/adding-state/test-factories-2 -->
+
 <% @user_friendships.each do |u_f| %>
-    <%= u_f %>
+    <% friend = u_f.friend %>
+    <%= link_to image_tag(friend.profile_pic.url), profile_path(friend) %>
+    <%= friend.profile_name %>
 <% end %>

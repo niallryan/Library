@@ -1,6 +1,7 @@
 class UserFriendshipsController < ApplicationController
   # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-controller
-  before_filter :authenticate_user!, only: [:new]
+  # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/adding-state/test-factories-2
+  before_filter :authenticate_user!
 
   def new
 
