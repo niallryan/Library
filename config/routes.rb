@@ -13,6 +13,8 @@ Library::Application.routes.draw do
 
   get "profiles/show"
   get "welcome/home"
+  get "authors/search_author"
+  get "authors/author_information"
 
   resources :updates do
     opinio
@@ -31,6 +33,10 @@ Library::Application.routes.draw do
 
   # http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2
   get '/:id', to: 'profiles#show', :as => :profile
+
+  # Routing for custom gem
+  match '/validate', :controller=>'authors', :action=>'author_information'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

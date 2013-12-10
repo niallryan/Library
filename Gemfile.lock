@@ -1,3 +1,8 @@
+PATH
+  remote: C:/Users/Niall/Projects/College/WAF/AuthorInfo
+  specs:
+    AuthorInfo (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -147,6 +152,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  AuthorInfo!
   coffee-rails (~> 3.2.1)
   devise
   goodreads

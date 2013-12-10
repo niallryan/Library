@@ -1,0 +1,5 @@
+<h1>Enter an Author's name to display information about them</h1>
+<%= form_tag "/validate" do %>
+    <%= text_field_tag :search_string %>
+    <%= submit_tag "Search" %>
+<% end %>

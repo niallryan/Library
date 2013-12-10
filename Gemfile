@@ -26,7 +26,8 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'opinio'
 gem 'goodreads'
-# gem 'acts_as_list'
+
+gem 'AuthorInfo', :path => 'C:/Users/Niall/Projects/College/WAF/AuthorInfo'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
