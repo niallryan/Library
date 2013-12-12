@@ -1,9 +1,10 @@
 class UpdatesController < ApplicationController
-  before_filter :authenticate_user! #, only: [:new]
+  before_filter :authenticate_user!
   # GET /updates
   # GET /updates.json
   def index
-    @updates = Update.all
+    # Reverse order of list of Updates so newest appears at the top of the page
+    @updates = Update.order('created_at desc').all
 
     respond_to do |format|
       format.html # index.html.erb

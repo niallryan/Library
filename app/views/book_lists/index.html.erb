@@ -1,4 +1,5 @@
-<h1>Listing book_lists</h1>
+<h1>Lists</h1>
+<%= link_to 'New Book list', new_book_list_path %>
 
 <table>
   <tr>
@@ -14,11 +15,9 @@
     <td><%= link_to 'Show', book_list %></td>
     <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
     <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <tr>
     <td><%= comments_for book_list %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Book list', new_book_list_path %>
