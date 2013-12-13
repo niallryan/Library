@@ -48,12 +48,21 @@
 <!--</p>-->
 
 <p>
-  <strong>Add To List</strong>
+  <h1>Add To List</h1>
   <%= form_for(@book) do |f| %>
     <%= f.collection_select 'book_list_ids', current_user.book_lists.all, :id, :title, { include_blank: "" } %>
     <%= f.submit %>
   <% end %>
 </p>
+
+<% if @reviews %>
+  <div>
+    <h1>Reviews</h1>
+    <% @reviews.each do |review| %>
+        <%= link_to "#{review.title}", review_path(review) %>
+    <% end %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

@@ -12,6 +12,9 @@
   <% end %>
 
   <div class="field">
+    <%= f.collection_select 'book_id', Book.all, :id, :title, { include_blank: "" } %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>

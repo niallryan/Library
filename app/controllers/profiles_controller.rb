@@ -11,7 +11,6 @@ class ProfilesController < ApplicationController
       @book_lists = @user.book_lists.all
       @reviews = @user.reviews.all
       @friends = @user.user_friendships.all
-      # @books_for_sale = @user.books.for_sale
       render action: :show
     else
       render file: 'public/404', status: 404, formats: [:html]
