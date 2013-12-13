@@ -23,9 +23,14 @@ class User < ActiveRecord::Base
 
   # http://teamtreehouse.com/library/advanced-social-features-in-ruby-on-rails/uploading-and-resizing-images/adding-avatars-2
   # http://teamtreehouse.com/library/advanced-social-features-in-ruby-on-rails/uploading-and-resizing-images/resizing-images-2
-  has_attached_file :profile_pic, styles: {
-      large: "800x800>", medium: "300x200>", small: "260x180>", thumb: "80x80#"
-  }, :default_url => "/images/default.png"
+  has_attached_file :profile_pic,
+                    styles: {
+                      large: "800x800>",
+                      medium: "300x200>",
+                      small: "260x180>",
+                      thumb: "80x80#"
+                    },
+                    :default_url => "/images/default.png"
 
   # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/creating-friendships/
   has_many :friends, through: :user_friendships

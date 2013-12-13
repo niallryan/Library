@@ -13,8 +13,12 @@
   <tr>
     <td><%= book_list.title %></td>
     <td><%= link_to 'Show', book_list %></td>
-    <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
-    <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if (current_user.id == book_list.user.id) || (current_user && current_user.admin) %>
+        <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
+    <% end %>
+    <% if current_user && current_user.admin %>
+        <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
   <tr>
     <td><%= comments_for book_list %></td>

@@ -1,4 +1,6 @@
 Library::Application.routes.draw do
+  get "cart/index"
+
   opinio_model
 
   resources :book_lists do
@@ -15,6 +17,8 @@ Library::Application.routes.draw do
   get "welcome/home"
   get "authors/search_author"
   get "authors/author_information"
+  get "cart/index"
+
 
   resources :updates do
     opinio
@@ -36,6 +40,11 @@ Library::Application.routes.draw do
 
   # Routing for custom gem
   match '/validate', :controller=>'authors', :action=>'author_information'
+
+  # Cart Routing
+  match '/cart', :controller=>'cart', :action=>'index'
+  match '/cart/:id', :controller=>'cart', :action=>'add'
+
 
 
   # The priority is based upon order of creation:

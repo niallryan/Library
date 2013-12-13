@@ -20,5 +20,7 @@
   <%= comments_for @review %>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
+<% if current_user.admin %>
+    <%= link_to 'Edit', edit_review_path(@review) %> |
+<% end %>
 <%= link_to 'Back', reviews_path %>

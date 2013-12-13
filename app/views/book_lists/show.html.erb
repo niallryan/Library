@@ -14,13 +14,17 @@
     <% end %>
 </p>
 
-<strong>Add Book</strong>
-<%= form_for(@book_list) do |f| %>
-    <%= f.collection_select 'book_ids', Book.all, :id, :title, { include_blank: "" } %>
-    <%= f.submit %>
+<% if current_user.id == @book_list.user.id %>
+    <strong>Add Book</strong>
+    <%= form_for(@book_list) do |f| %>
+        <%= f.collection_select 'book_ids', Book.all, :id, :title, { include_blank: "" } %>
+        <%= f.submit %>
+    <% end %>
 <% end %>
 
 <%= comments_for @book_list %>
 
-<%= link_to 'Edit', edit_book_list_path(@book_list) %> |
+<% if current_user.admin %>
+    <%= link_to 'Edit', edit_book_list_path(@book_list) %> |
+<% end %>
 <%= link_to 'Back', book_lists_path %>

@@ -5,8 +5,12 @@
 <%= @user.favourite_book %>
 
 <h1><%= @user.profile_name %></h1>
-<!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
-<%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: "btn" %>
+
+<!-- Show button if user is on a profile page that is not their own and if the user is not already their friend -->
+<% if @user.id != current_user.id %>
+    <!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
+    <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: "btn" %>
+<% end %>
 
 
 <% if @updates %>
@@ -28,7 +32,8 @@
         <% elsif book.for_sale %>
             <h1>Books For Sale</h1>
             <%= book.title %>
-            <%= book.price %>
+            <%= number_to_currency(book.price, :unit => "&#8364;") %>
+            <a href="/cart/<%= book.id %>">Add to Cart</a><br><br>
         <% end %>
     <% end %>
     <!--<h1>Books For Sale</h1>-->
@@ -55,7 +60,7 @@
     <h1>Reviews</h1>
     <% @reviews.each do |review| %>
         <div>
-          <%= review.title %> | <%= review.rating %>
+          <%= review.book.title %> | <%= review.title %> | <%= review.rating %>
         </div>
     <% end %>
 <% end %>
