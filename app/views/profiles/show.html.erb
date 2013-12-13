@@ -21,10 +21,22 @@
 <% if @books %>
     <h1>Books</h1>
     <% @books.each do |book| %>
+        <% if !book.for_sale %>
         <div>
           <%= book.title %>
         </div>
+        <% elsif book.for_sale %>
+            <h1>Books For Sale</h1>
+            <%= book.title %>
+            <%= book.price %>
+        <% end %>
     <% end %>
+    <!--<h1>Books For Sale</h1>-->
+    <!--<#% @books_for_sale.each do |book| %>-->
+        <!--<div>-->
+          <!--<#%= book.title %>-->
+        <!--</div>-->
+    <!--<#% end %>-->
 <% end %>
 
 <% if @book_lists %>
