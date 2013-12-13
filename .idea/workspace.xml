@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b389df0c-bec2-474b-accb-15fe13cfbe71" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Niall\Projects\College\WAF\Library\app\views\infos\authorinfo.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/book.rb" afterPath="$PROJECT_DIR$/app/models/book.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profiles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/profiles/show.html.erb" />
     </list>
     <ignored path="Library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,10 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="16" selection-start="836" selection-end="836" vertical-scroll-proportion="0.82545453" vertical-offset="5" max-vertical-offset="1275">
+            <state line="27" column="16" selection-start="836" selection-end="836" vertical-scroll-proportion="-17.461538" vertical-offset="5" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131213115219_add_admin_to_users.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20131213115219_add_admin_to_users.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.1443124" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -101,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20131204200134_remove_book_references_from_book_list.rb" />
         <option value="$PROJECT_DIR$/app/views/book_lists/_form.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20131204234304_add_title_to_book_lists.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20131204194458_create_book_lists.rb" />
@@ -152,6 +156,7 @@
         <option value="$PROJECT_DIR$/app/views/books/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/profiles/show.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20131213115219_add_admin_to_users.rb" />
       </list>
     </option>
   </component>
@@ -665,11 +670,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7101" column="12" selection-start="126473" selection-end="126473" vertical-scroll-proportion="0.0" vertical-offset="120209" max-vertical-offset="120853" />
@@ -903,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131213110728_add_for_sale_to_books.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="40" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/book.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="140" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -933,7 +926,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="836" selection-end="836" vertical-scroll-proportion="0.82545453" vertical-offset="5" max-vertical-offset="1275">
+        <state line="27" column="16" selection-start="836" selection-end="836" vertical-scroll-proportion="-17.461538" vertical-offset="5" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131213110728_add_for_sale_to_books.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131213115219_add_admin_to_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.1443124" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
