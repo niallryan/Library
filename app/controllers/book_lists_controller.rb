@@ -65,7 +65,7 @@ class BookListsController < ApplicationController
       @book_list_item = BookListItem.new(:book_id => @book_id, :book_list_id => @book_list.id)
     end
 
-    @book_list.book_ids += [@book_list_item.book_id]
+    # @book_list.book_ids += [@book_list_item.book_id]
 
     respond_to do |format|
       if @book_list.save

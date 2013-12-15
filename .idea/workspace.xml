@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b389df0c-bec2-474b-accb-15fe13cfbe71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Library.iml" afterPath="$PROJECT_DIR$/.idea/Library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/book.rb" afterPath="$PROJECT_DIR$/app/models/book.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/book_list.rb" afterPath="$PROJECT_DIR$/app/models/book_list.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/book_list_item.rb" afterPath="$PROJECT_DIR$/app/models/book_list_item.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/book_lists_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/book_lists_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/book_test.rb" afterPath="$PROJECT_DIR$/test/unit/book_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/books_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/books_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/books/index.html.erb" afterPath="$PROJECT_DIR$/app/views/books/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.txt" afterPath="$PROJECT_DIR$/page.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/response.json" afterPath="$PROJECT_DIR$/response.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/response.rb" afterPath="$PROJECT_DIR$/response.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/review_test.rb" afterPath="$PROJECT_DIR$/test/unit/review_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/book_lists/show.html.erb" afterPath="$PROJECT_DIR$/app/views/book_lists/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/books/show.html.erb" afterPath="$PROJECT_DIR$/app/views/books/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profiles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/profiles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/update_test.rb" afterPath="$PROJECT_DIR$/test/unit/update_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Library.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,6 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="book_lists_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/book_lists_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="6" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.35409835" vertical-offset="923" max-vertical-offset="1666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthorInfo.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AuthorInfo.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../AuthorInfo/lib/AuthorInfo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="31" selection-start="898" selection-end="898" vertical-scroll-proportion="0.41311476" vertical-offset="309" max-vertical-offset="1598">
+            <state line="48" column="29" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -145,12 +136,12 @@
         <option value="$PROJECT_DIR$/app/views/books/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/book.rb" />
         <option value="$PROJECT_DIR$/app/controllers/books_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/book_lists_controller.rb" />
         <option value="$PROJECT_DIR$/../AuthorInfo/Rakefile" />
         <option value="$PROJECT_DIR$/../AuthorInfo/test/test_AuthorInfo.rb" />
         <option value="$PROJECT_DIR$/../AuthorInfo/AuthorInfo.gemspec" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/../AuthorInfo/lib/AuthorInfo.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/book_lists_controller.rb" />
       </list>
     </option>
   </component>
@@ -959,13 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/book_lists_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="40" selection-start="1599" selection-end="1599" vertical-scroll-proportion="0.0" vertical-offset="923" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/books/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="4" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="506" max-vertical-offset="1173">
@@ -1090,7 +1074,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../AuthorInfo/lib/AuthorInfo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="31" selection-start="898" selection-end="898" vertical-scroll-proportion="0.41311476" vertical-offset="309" max-vertical-offset="1598">
+        <state line="48" column="29" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0" vertical-offset="309" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/book_lists_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="6" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.35409835" vertical-offset="923" max-vertical-offset="1666">
           <folding />
         </state>
       </provider>
