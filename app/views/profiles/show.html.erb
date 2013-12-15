@@ -1,69 +1,105 @@
 <!-- http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application/building-the-profile-page/testing-the-profiles-controller-2 -->
+<div class="well">
+    <h1><%= @user.profile_name %></h1>
+    <%= profile_pic_link @user, {} %>
+    <label>Favourite Book:</label>
+    <%= @user.favourite_book %>
+    <div>
+      <!-- Show button if user is on a profile page that is not their own and if the user is not already their friend -->
+      <% if @user.id != current_user.id %>
+          <!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
+          <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: "btn btn-success" %>
+      <% end %>
+    </div>
+</div>
 
-<%= profile_pic_link @user, {} %>
-<label>Favourite Book:</label>
-<%= @user.favourite_book %>
 
-<h1><%= @user.profile_name %></h1>
-
-<!-- Show button if user is on a profile page that is not their own and if the user is not already their friend -->
-<% if @user.id != current_user.id %>
-    <!-- http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/building-the-friendship-ui/creating-the-friendship-form -->
-    <%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: "btn" %>
-<% end %>
-
-
-<% if @updates %>
-    <h1>Updates</h1>
-    <% @updates.each do |update| %>
-        <div>
-          <%= update.content %>
-        </div>
-    <% end %>
-<% end %>
-
-<% if @books %>
-    <h1>Books</h1>
-    <% @books.each do |book| %>
-        <% if !book.for_sale %>
-        <div>
-          <%= book.title %>
-        </div>
-        <% elsif book.for_sale %>
-            <h1>Books For Sale</h1>
-            <%= book.title %>
-            <%= number_to_currency(book.price, :unit => "&#8364;") %>
-            <a href="/cart/<%= book.id %>">Add to Cart</a><br><br>
+<% if @updates.length > 0 %>
+    <div class="well">
+        <h1>Updates</h1>
+        <% @updates.each do |update| %>
+            <div>
+                <%= update.content %>
+            </div>
         <% end %>
-    <% end %>
+    </div>
+<% else %>
+    <div class="well">
+        <h1>Updates</h1>
+        <p>You don't have any updates</p>
+    </div>
 <% end %>
 
-<% if @book_lists %>
-    <h1>Lists</h1>
-    <% @book_lists.each do |list| %>
-        <div>
-          <h3><%= list.title %></h3>
-          <% list.books.each do |book| %>
-            <%= book.title %>
-          <% end %>
-        </div>
-    <% end %>
+<% if @books.length > 0 %>
+    <div class="well">
+        <h1>Books</h1>
+        <% @books.each do |book| %>
+            <% if !book.for_sale %>
+            <div>
+                <%= book.title %>
+            </div>
+            <% elsif book.for_sale %>
+                <h1>Books For Sale</h1>
+                <%= book.title %>
+                <%= number_to_currency(book.price, :unit => "&#8364;") %>
+                <a href="/cart/<%= book.id %>">Add to Cart</a><br><br>
+            <% end %>
+        <% end %>
+    </div>
+<<% else %>
+    <div class="well">
+      <h1>Books</h1>
+      <p>You don't have any books.</p>
+    </div>
 <% end %>
 
-<% if @reviews %>
-    <h1>Reviews</h1>
-    <% @reviews.each do |review| %>
-        <div>
-          <%= review.book.title %> | <%= review.title %> | <%= review.rating %>
-        </div>
-    <% end %>
+<% if @book_lists.length > 0 %>
+    <div class="well">
+        <h1>Lists</h1>
+        <% @book_lists.each do |list| %>
+            <div>
+                    <h3><%= link_to "#{ list.title }", book_list_path(list) %></h3>
+                <% list.books.each do |book| %>
+                    <%= book.title %><br />
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+<% else %>
+    <div class="well">
+      <h1>Lists</h1>
+      <p>You don't have any lists.</p>
+    </div>
 <% end %>
 
-<% if @friends %>
-    <h1>Friends</h1>
-    <% @friends.each do |f| %>
-        <div>
-          <%= f.friend.profile_name %>
-        </div>
-    <% end %>
+<% if @reviews.length > 0 %>
+    <div class="well">
+        <h1>Reviews</h1>
+        <% @reviews.each do |review| %>
+            <div>
+                <%= link_to "#{review.book.title} | #{review.title} | #{review.rating}", review_path(review) %>
+            </div>
+        <% end %>
+    </div>
+<% else %>
+    <div class="well">
+      <h1>Reviews</h1>
+      <p>You don't have any reviews.</p>
+    </div>
+<% end %>
+
+<% if @friends.length > 0 %>
+    <div class="well">
+        <h1>Friends</h1>
+        <% @friends.each do |f| %>
+            <div>
+                <%= link_to "#{f.friend.profile_name}", profile_path(f.friend) %>
+            </div>
+        <% end %>
+    </div>
+<% else %>
+    <div class="well">
+        <h1>Friends</h1>
+        <p>You don't have any friends.</p>
+    </div>
 <% end %>

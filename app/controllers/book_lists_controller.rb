@@ -62,13 +62,18 @@ class BookListsController < ApplicationController
     @book_id = params[:book_list].delete(:books)
 
     if @book_id
-      @book_list_item = BookListItem.new(:book_id => @book_id, :book_list_id => @book_list.id)
+      @book_list_item = BookListItem.create(:book_id => @book_id, :book_list_id => @book_list.id)
     end
 
+    # Update book_ids
+    # This works if I change respond block below to @book_list.save:
+    # @book_list.book_ids += [2, 3]
+    # This doesn't work
     # @book_list.book_ids += [@book_list_item.book_id]
+    # @book_list_item not being created properly
 
     respond_to do |format|
-      if @book_list.save
+      if @book_list.update_attributes(params[:book_list])
         format.html { redirect_to @book_list, notice: 'Book list was successfully updated.' }
         format.json { head :no_content }
       else

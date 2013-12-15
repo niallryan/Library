@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
     @user = User.find_by_profile_name(params[:id])
 
     if @user
+      # get all user's resources
       @updates = @user.updates.all
       @books = @user.books.all
       @book_lists = @user.book_lists.all

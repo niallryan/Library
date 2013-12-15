@@ -1,16 +1,29 @@
-Hello
-
 <% if user_signed_in? %>
-    <h3>Search For Users</h3>
-    <%= form_tag @user, :method => 'get' do %>
-        <p>
-          <%= text_field_tag :search_query, params[:search_query] %>
-          <%= submit_tag "Search", :name => nil %>
-        </p>
-    <% end %>
-    <% if @users %>
-        <% @users.each do |user| %>
-            <%= link_to "#{user.profile_name}", profile_path(user) %>
+    <div class="well">
+        <h3>Search For Users</h3>
+        <%= form_tag @user, :method => 'get' do %>
+            <p>
+                <%= text_field_tag :search_query, params[:search_query] %>
+                <%= submit_tag "Search", :name => nil %>
+            </p>
         <% end %>
-    <% end %>
+        <% if @users %>
+            <h4>Results:</h4>
+            <% @users.each do |user| %>
+                <p><%= link_to "#{user.profile_name}", profile_path(user) %></p>
+            <% end %>
+        <% end %>
+    </div>
 <% end %>
+
+<div class="well">
+  <h1>Library</h1>
+  <p>Library is a web application for lovers of all kinds of books to interact with people who share their passion.</p>
+  <% if user_signed_in? %>
+    <p>Create a new book, check out your friends' updates, read new reviews, create a new book list or search for Author Information by clicking one of the links above.</p>
+  <% else %>
+    <p>
+      <%= link_to "Create an account", new_user_registration_path %> or <%= link_to "Log In", new_user_session_path %> to get started.</p>
+  <% end %>
+
+</div>

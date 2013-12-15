@@ -1,23 +1,30 @@
-<h1>Updates</h1>
-<%= link_to 'New Update', new_update_path %>
+<div class="well">
+  <h1>Updates</h1>
+  <p><%= link_to 'New Update', new_update_path, :class => "btn btn-primary" %></p>
+</div>
 
-<table>
+
 
 <% @updates.each do |update| %>
-  <tr>
-    <td><%= profile_pic_link update.user, {} %></td>
-    <td><%= update.user.profile_name %></td>
-    <td><%= update.content %></td>
-    <td><%= link_to 'Show', update %></td>
-    <% if current_user.id === update.user.id %>
-        <td><%= link_to 'Edit', edit_update_path(update) %></td>
-    <% end %>
-    <% if current_user && current_user.admin %>
-        <td><%= link_to 'Destroy', update, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td><%= comments_for update %></td>
-  </tr>
+
+    <div class="well">
+  
+        <%= profile_pic_link update.user, {} %>
+        <strong><%= update.user.profile_name %></strong>
+        <p><%= update.content %></p>
+        <p>
+            <%= link_to 'Show', update %>
+            <% if current_user.id === update.user.id || current_user.admin %>
+                <%= link_to 'Edit', edit_update_path(update) %>
+            <% end %>
+            <% if current_user && current_user.admin %>
+                <%= link_to 'Destroy', update, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </p>
+
+        <%= comments_for update %>
+
+    </div>
+
 <% end %>
-</table>
+

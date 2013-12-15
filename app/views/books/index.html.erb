@@ -1,5 +1,7 @@
+<div class="well">
+
 <h1>Books</h1>
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path, :class => "btn btn-primary" %>
 
 <table>
   <tr>
@@ -24,7 +26,7 @@
     <td><%= book.description %></td>
     <td><%= link_to 'Show', book %></td>
 
-    <% if current_user.id === book.user_id %>
+    <% if current_user.id === book.user_id || current_user.admin %>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
     <% end %>
     <% if current_user && current_user.admin %>
@@ -33,3 +35,5 @@
   </tr>
 <% end %>
 </table>
+
+</div>

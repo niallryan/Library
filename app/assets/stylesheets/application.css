@@ -12,3 +12,12 @@
  *= require_tree .
  */
 
+body {
+    background: url("wood_03.jpg") repeat !important;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+}
+

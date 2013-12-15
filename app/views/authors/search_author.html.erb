@@ -1,6 +1,10 @@
+<div class="well">
+
 <h1>Enter an Author's name to display information about them</h1>
 <p>Please enter the name in the form "First Last" to ensure more accurate results e.g. "James Joyce", "Joseph Conrad"</p>
 <%= form_tag "/validate" do %>
     <%= text_field_tag :search_string %>
     <%= submit_tag "Search" %>
 <% end %>
+
+</div>

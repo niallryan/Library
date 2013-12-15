@@ -8,8 +8,7 @@ class UserFriendshipsController < ApplicationController
     if params[:friend_id]
       # find friend by friend_id
       @friend = User.where(profile_name: params[:friend_id]).first
-      raise ActibeRecord::RecordNotFound if @friend.nil?
-      # @user_friendship = current_user.user_friendships.new(friend: @friend)
+      raise ActiveRecord::RecordNotFound if @friend.nil?
       @user_friendship = UserFriendship.new(friend: @friend, user: current_user)
     else
       flash[:error] = "Friend Required"
@@ -23,8 +22,11 @@ class UserFriendshipsController < ApplicationController
 
   def create
 
+    # make sure there's a user_id and a friend_id to pass in
     if params[:user_friendship] && params[:user_friendship].has_key?(:friend_id)
+      # get friend
       @friend = User.where(profile_name: params[:user_friendship][:friend_id]).first
+      #create friendship with user id and friend id
       @user_friendship = UserFriendship.new(friend: @friend, user: current_user)
       @user_friendship.save
       redirect_to profile_path(@friend)

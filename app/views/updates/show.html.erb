@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div class="well">
+
+  <p id="notice"><%= notice %></p>
 
 <p>
   <%= profile_pic_link @update.user, {} %>
@@ -20,3 +22,5 @@
     <%= link_to 'Edit', edit_update_path(@update) %> |
 <% end %>
 <%= link_to 'Back', updates_path %>
+
+</div>

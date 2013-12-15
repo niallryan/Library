@@ -26,6 +26,7 @@ class UpdatesController < ApplicationController
   # GET /updates/new
   # GET /updates/new.json
   def new
+    # scope to current_user
     @update = current_user.updates.new
 
     respond_to do |format|
@@ -43,6 +44,7 @@ class UpdatesController < ApplicationController
   # POST /updates.json
   def create
     # http://teamtreehouse.com/library/building-social-features-in-ruby-on-rails-2/creating-friendships/what-is-a-join-table
+    # scope to current_user
     @update = current_user.updates.new(params[:update])
 
     respond_to do |format|

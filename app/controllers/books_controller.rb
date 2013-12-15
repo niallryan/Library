@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
+    # Order books by Author
     @books = Book.order('author').all
 
     respond_to do |format|

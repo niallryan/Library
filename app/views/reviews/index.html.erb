@@ -1,31 +1,35 @@
-<h1>Reviews</h1>
-<%= link_to 'New Review', new_review_path %>
+<div class="well">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Rating</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Reviews</h1>
+<%= link_to 'New Review', new_review_path, :class => "btn btn-primary" %>
+
+</div>
+
 
 <% @reviews.each do |review| %>
-  <tr>
-    <td><%= review.title %></td>
-    <td><%= review.content %></td>
-    <td><%= review.rating %></td>
-    <td><%= link_to 'Show', review %></td>
-    <% if current_user.id == review.user.id %>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
+
+    <div class="well">
+
+    <h4>
+        <%= review.title %>
+    </h4>
+    <p>Content:</p>
+    <%= review.content %>
+    <p>Rating: <%= review.rating %></p>
+
+    <%= link_to 'Show', review %>
+    <% if current_user.id == review.user_id || current_user.admin %>
+        <%= link_to 'Edit', edit_review_path(review) %>
     <% end %>
     <% if current_user && current_user.admin %>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-  </tr>
-  <tr>
-    <td><%= comments_for review %></td>
-  </tr>
+  
+  
+    <%= comments_for review %>
+
+    </div>
 <% end %>
-</table>
+
+
+</div>

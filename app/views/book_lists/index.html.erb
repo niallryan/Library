@@ -1,27 +1,23 @@
-<h1>Lists</h1>
-<%= link_to 'New Book list', new_book_list_path %>
+<div class="well">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Lists</h1>
+<%= link_to 'New Book list', new_book_list_path, :class => "btn btn-primary" %>
+
+</div>
 
 <% @book_lists.each do |book_list| %>
-  <tr>
-    <td><%= book_list.title %></td>
-    <td><%= link_to 'Show', book_list %></td>
-    <% if (current_user.id == book_list.user.id) || (current_user && current_user.admin) %>
-        <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
+    <div class="well">
+    <h1><%= book_list.title %></h1>
+    <%= link_to 'Show', book_list %>
+    <% if (current_user.id == book_list.user.id) || current_user.admin %>
+        <%= link_to 'Edit', edit_book_list_path(book_list) %>
     <% end %>
     <% if current_user && current_user.admin %>
-        <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-  </tr>
-  <tr>
-    <td><%= comments_for book_list %></td>
-  </tr>
+
+    <%= comments_for book_list %>
+    </div>
+
 <% end %>
-</table>
+</div>
