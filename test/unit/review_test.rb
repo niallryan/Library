@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "a review should have a title" do
+    review = Review.new
+    assert !review.save
+    assert !review.errors[:title].empty?
+  end
+
 end

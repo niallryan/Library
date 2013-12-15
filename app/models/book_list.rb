@@ -7,6 +7,12 @@ class BookList < ActiveRecord::Base
   has_many :books, through: :book_list_items
   belongs_to :user
 
-  attr_accessible :title, :book_list_id, :book_id, :book_ids, :book_list_ids
+  attr_accessible :title, :book_ids
+
+  # simple_list = []
+  #
+  # def self.add_to_simple_list(list_item)
+  #   simple_list << list_item
+  # end
 
 end

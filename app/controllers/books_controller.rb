@@ -61,10 +61,10 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
 
     # https://gist.github.com/arelenglish/6110438
-    @book_list_id = params[:book].delete(:book_lists)
+    book_list_id = params[:book].delete(:book_lists)
 
-    if @book_list_id
-      @book_list_item = BookListItem.create(:book_list_id => @book_list_id, :book_id => @book.id)
+    if book_list_id
+      book_list_item = BookListItem.create(:book_list_id => book_list_id, :book_id => @book.id)
     end
 
     respond_to do |format|

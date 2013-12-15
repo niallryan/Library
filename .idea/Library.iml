@@ -120,7 +120,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="AuthorInfo (v0.0.0, C:/Users/Niall/Projects/College/WAF/AuthorInfo) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="AuthorInfo (v1.0.1, C:/Users/Niall/Projects/College/WAF/AuthorInfo) [path][gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-1.9.3-p392) [gem]" level="application" />

@@ -62,11 +62,13 @@ class BookListsController < ApplicationController
     @book_id = params[:book_list].delete(:books)
 
     if @book_id
-      @book_list_item = BookListItem.create(:book_id => @book_id, :book_list_id => @book_list.id)
+      @book_list_item = BookListItem.new(:book_id => @book_id, :book_list_id => @book_list.id)
     end
 
+    @book_list.book_ids += [@book_list_item.book_id]
+
     respond_to do |format|
-      if @book_list.update_attributes(params[:book_list])
+      if @book_list.save
         format.html { redirect_to @book_list, notice: 'Book list was successfully updated.' }
         format.json { head :no_content }
       else

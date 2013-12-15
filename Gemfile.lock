@@ -1,7 +1,7 @@
 PATH
-  remote: C:/Users/Niall/Projects/College/WAF/AuthorInfo
+  remote: ../AuthorInfo
   specs:
-    AuthorInfo (0.0.0)
+    AuthorInfo (1.0.5)
 
 GEM
   remote: https://rubygems.org/

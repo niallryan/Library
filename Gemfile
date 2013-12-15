@@ -27,7 +27,8 @@ gem 'paperclip'
 gem 'opinio'
 gem 'goodreads'
 
-gem 'AuthorInfo', :path => 'C:/Users/Niall/Projects/College/WAF/AuthorInfo'
+# Custom Gem
+gem 'AuthorInfo', :path => '../AuthorInfo'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

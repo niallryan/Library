@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  attr_accessible :ISBN, :author, :genre, :publisher, :title, :cover_image, :user_id, :description, :book_list_id, :book_list_ids, :for_sale
+  attr_accessible :ISBN, :author, :genre, :publisher, :title, :cover_image, :user_id, :description, :book_list_ids, :for_sale
 
   opinio_subjectum
 

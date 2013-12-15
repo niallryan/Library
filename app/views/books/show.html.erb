@@ -40,13 +40,6 @@
   <%= comments_for @book %>
 </p>
 
-<!--<p>-->
-  <!--<strong>Lists:</strong><br />-->
-  <!--<#% @book.book_list_items.each do |item| %>-->
-    <!--<#%= BookList.find(item.book_list_id).title %><br />-->
-  <!--<#% end %>-->
-<!--</p>-->
-
 <p>
   <h1>Add To List</h1>
   <%= form_for(@book) do |f| %>

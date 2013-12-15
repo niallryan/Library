@@ -10,11 +10,12 @@
 <p>
   <strong>Books</strong><br />
     <% @book_list.book_list_items.each do |item| %>
-        <%= item.book.title %><br />
+        <!-- <#%= book.title %><br /> -->
+        <%= Book.find(item.book_id).title %><br>
     <% end %>
 </p>
 
-<% if current_user.id == @book_list.user.id %>
+<% if current_user.id == @book_list.user.id || current_user.admin %>
     <strong>Add Book</strong>
     <%= form_for(@book_list) do |f| %>
         <%= f.collection_select 'book_ids', Book.all, :id, :title, { include_blank: "" } %>
